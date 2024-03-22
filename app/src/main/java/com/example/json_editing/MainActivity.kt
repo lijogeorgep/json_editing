@@ -7,6 +7,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val disclosures = listOf(
+            "WyJtN2ZmSGJrbWJMemtSdWw0bkgxekN3IiwibGFzdE5hbWUiLCJEb2UiXQ==",
+            "WyJjdUZSSXRwaEViVE9IOU4zTHh1VE1RIiwic2VyaWFsTnVtYmVyIiwiMTIzNDUiXQ==",
+            "WyJMZWVCeWJ6Uk1YWEtRVjVRNm5sc09RIiwiZ2VuZGVyIiwiTWFsZSJd",
+            "WyJveThaaW9kY0diNWR1RGZwc0dwVy1RIiwiZmlyc3ROYW1lIiwiSm9obiJd",
+            "WyJOSzIzX0F6dmdPclFjc3NNUGItVEV3IiwibmF0aW9uYWxpdHkiLCJFVSJd"
+        )
         val originalJson = """{
   "@context": [
     "https://www.w3.org/2018/credentials/v1",
@@ -32,11 +39,11 @@ class MainActivity : AppCompatActivity() {
   "credentialSubject": {
     "cred": {
       "_sd": [
-        "wF5TbYXU4HbnvbF0g1Va2-ZHVfqiS2Vkc-CAWeG6wkM",
-        "KrDmv1US2-_d90CB_InqafeaDSA8uuENnhPTWVTxVlQ",
-        "9GgTnIjhELkbzYBCyTsiSpKNPyhg9lHe2TlHQp-g89E",
-        "uJBaaIIMN9sP2910fEb9hoJk0bHJaWT7VJRL6cU1XoA",
-        "SLC7qU0XIHAcV2r3nOLt43btfAnOw216Z00K-Cd2uVc"
+        "9soGNMzf-tbcvnTgnt8oWCRPve6EphhNX8BHbieIJ-A",
+        "jw-ybk660khxWyQhu29rN_PF6LTSy5m6vOC2tGOIW74",
+        "cVl5HkJyjv_vTPGWbun11gbgd2mDWzyhew-1OPkmh6g",
+        "IBFmE-8fcoAVSPkmzA6VMbArMJHiPmNXgeXbnDlQWy8",
+        "50ZJpOPR3B0Z3tbjUeK-fexOTt8zoEdL80-1nXZ4c38"
       ]
     },
     "serialNumber": "12345",
@@ -45,22 +52,22 @@ class MainActivity : AppCompatActivity() {
     "expiryDate": "12-12-2026",
     "id": "did:key:z2dmzD81cgPx8Vki7JbuuMmFYrWPgYoytykUZ3eyqht1j9KbndeoNhFTpdnkqkkC85C6ChoYBrhrRrjGu7dW5TrChVuKusBiy8Wrz6Gmz9WC2fBB5qtc1B6uDeLHmzNLVQxqQwkDT2WdSFsYVMswYYePR9T5xNF9xMiz2UbBQ9JeGsNMPi#z2dmzD81cgPx8Vki7JbuuMmFYrWPgYoytykUZ3eyqht1j9KbndeoNhFTpdnkqkkC85C6ChoYBrhrRrjGu7dW5TrChVuKusBiy8Wrz6Gmz9WC2fBB5qtc1B6uDeLHmzNLVQxqQwkDT2WdSFsYVMswYYePR9T5xNF9xMiz2UbBQ9JeGsNMPi",
     "_sd": [
-      "wF5TbYXU4HbnvbF0g1Va2-ZHVfqiS2Vkc-CAWeG6wkM",
-      "KrDmv1US2-_d90CB_InqafeaDSA8uuENnhPTWVTxVlQ",
-      "9GgTnIjhELkbzYBCyTsiSpKNPyhg9lHe2TlHQp-g89E",
-      "uJBaaIIMN9sP2910fEb9hoJk0bHJaWT7VJRL6cU1XoA",
-      "SLC7qU0XIHAcV2r3nOLt43btfAnOw216Z00K-Cd2uVc"
+        "9soGNMzf-tbcvnTgnt8oWCRPve6EphhNX8BHbieIJ-A",
+        "jw-ybk660khxWyQhu29rN_PF6LTSy5m6vOC2tGOIW74",
+        "cVl5HkJyjv_vTPGWbun11gbgd2mDWzyhew-1OPkmh6g",
+        "IBFmE-8fcoAVSPkmzA6VMbArMJHiPmNXgeXbnDlQWy8",
+        "50ZJpOPR3B0Z3tbjUeK-fexOTt8zoEdL80-1nXZ4c38"
     ]
   },
   "_sd": [
-    "wF5TbYXU4HbnvbF0g1Va2-ZHVfqiS2Vkc-CAWeG6wkM",
-    "KrDmv1US2-_d90CB_InqafeaDSA8uuENnhPTWVTxVlQ",
-    "9GgTnIjhELkbzYBCyTsiSpKNPyhg9lHe2TlHQp-g89E",
-    "uJBaaIIMN9sP2910fEb9hoJk0bHJaWT7VJRL6cU1XoA",
-    "SLC7qU0XIHAcV2r3nOLt43btfAnOw216Z00K-Cd2uVc"
+        "9soGNMzf-tbcvnTgnt8oWCRPve6EphhNX8BHbieIJ-A",
+        "jw-ybk660khxWyQhu29rN_PF6LTSy5m6vOC2tGOIW74",
+        "cVl5HkJyjv_vTPGWbun11gbgd2mDWzyhew-1OPkmh6g",
+        "IBFmE-8fcoAVSPkmzA6VMbArMJHiPmNXgeXbnDlQWy8",
+        "50ZJpOPR3B0Z3tbjUeK-fexOTt8zoEdL80-1nXZ4c38"
   ]
 }"""
-        val modifiedJson = JsonModifier.addTestKey(originalJson)
+        val modifiedJson = JsonModifier.addTestKey(originalJson, disclosures)
         println("Resulted json is :$modifiedJson")
     }
 }
